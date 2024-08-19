@@ -1,0 +1,14 @@
+    Comandos do HTML
+    
+    <!-- Comentário -->
+<p>parágrafo</p>
+<b>conteúdo em negrito</b>
+<i>conteúdo em itálico</i>
+<br>quebra de linha</br>
+<hr>linha horizontal</hr>
+<pre>muito usada para inserir códigos</pre>
+<em>conteúdo em ênfase</em>
+<strong>conteúdo com grande importância</strong>
+<div>container em bloco</div>
+<span>container em linha</span>
+<main>conteúdo principal</main>

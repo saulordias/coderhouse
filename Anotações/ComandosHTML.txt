@@ -1,5 +1,81 @@
     Comandos do HTML
     
+   
+   TAGS DO HTML 
+
+Tags Estruturais
+
+<html>: Envolve todo o conteúdo de uma página HTML.
+<head>: Contém metadados sobre o documento, como título, links para arquivos CSS, scripts, etc.
+<title>: Define o título da página, que aparece na aba do navegador.
+<body>: Contém todo o conteúdo visível da página, como texto, imagens, links, etc.
+Tags de Cabeçalho e Parágrafo
+<h1> a <h6>: Definem cabeçalhos, do mais importante (<h1>) ao menos importante (<h6>).
+<p>: Define um parágrafo de texto.
+<br>: Insere uma quebra de linha.
+
+Tags de Formatação de Texto
+
+<strong>: Indica texto importante, geralmente renderizado em negrito.
+<em>: Indica texto enfatizado, geralmente renderizado em itálico.
+<b>: Aplica negrito ao texto (sem implicar importância).
+<i>: Aplica itálico ao texto (sem implicar ênfase).
+<u>: Sublinhar o texto.
+
+Tags de Listas
+
+<ul>: Define uma lista não ordenada (com marcadores).
+<ol>: Define uma lista ordenada (com números).
+<li>: Define um item de lista dentro de <ul> ou <ol>.
+
+Tags de Links e Navegação
+
+<a>: Define um link de hipertexto.
+<nav>: Define uma seção de navegação, geralmente usada para grupos de links.
+
+Tags de Mídia
+
+<img>: Insere uma imagem.
+<audio>: Insere conteúdo de áudio.
+<video>: Insere conteúdo de vídeo.
+
+Tags de Tabelas
+
+<table>: Define uma tabela.
+<tr>: Define uma linha de tabela.
+<td>: Define uma célula de tabela.
+<th>: Define uma célula de cabeçalho de tabela.
+
+Tags de Formulário
+
+<form>: Define um formulário HTML.
+<input>: Define um campo de entrada de dados.
+<textarea>: Define uma área de texto para entradas longas.
+<button>: Define um botão clicável.
+
+Tags Semânticas
+
+<header>: Define o cabeçalho de uma seção ou documento.
+<footer>: Define o rodapé de uma seção ou documento.
+<section>: Define uma seção genérica de conteúdo.
+<article>: Define um conteúdo independente que pode ser distribuído separadamente.
+<aside>: Define conteúdo relacionado, como barras laterais.
+
+Tags de Scripts e Estilos
+
+<script>: Insere ou referencia código JavaScript.
+<style>: Insere CSS embutido para estilizar a página.
+
+Tags Diversas
+
+<div>: Define uma divisão ou seção de um documento.
+<span>: Define uma seção de texto embutida.
+<meta>: Define metadados para o documento HTML, como charset ou viewport.
+<link>: Conecta o documento a um recurso externo, como uma folha de estilo CSS.
+<iframe>: Insere um frame embutido (um documento HTML dentro de outro).
+   
+   
+   
     <!-- Comentário -->
 <p>parágrafo</p>
 <b>conteúdo em negrito</b>
@@ -12,3 +88,5 @@
 <div>container em bloco</div>
 <span>container em linha</span>
 <main>conteúdo principal</main>
+
+

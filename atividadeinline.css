@@ -1,0 +1,27 @@
+p {
+/* Tranformando em linha */
+
+    display: inline;
+    background-color: blue;
+
+}
+
+span {
+
+   /* Tranformando em Bloco */ 
+    display: block;
+    background-color: brown;
+
+}
+
+#menu {
+
+width: 150px;
+height: 100px;
+background-color: aqua;
+position: sticky;
+top: 10px;
+left: 10px;
+
+padding: 50px;
+}

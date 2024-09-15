@@ -1,31 +1,57 @@
-#lista1{
-
-    color: rgb(255, 255, 255);
-    font-family: "Roboto";
-    background-color: rgb(151, 0, 0);
-    font-size: 50px;
+nav.Menu {
+    background-color: #0991AF; /* Cor de fundo azul */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
 }
 
-#lista2{
-
-    color: rgb(0, 0, 0);
-    background-color: rgb(151, 0, 118);
-    font-size: 20px;
-}
-}
-.desafio1{
-
-    color: orange;
- 
+nav.Menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    
 }
 
-p{
-
-    color: rgb(11, 88, 15);
- 
+nav.Menu ul li {
+    display: inline-block;
 }
 
-p{
+nav.Menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+}
 
-    color: rgb(88, 11, 11);
+.search-form {
+    margin-left: auto; /* Empurra o campo de busca para a direita */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-form button {
+    background-color: #ffffff;
+    color: #0991AF;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #0991AF;
 }

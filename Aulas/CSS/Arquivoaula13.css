@@ -1,1 +1,25 @@
-li input:focus{background-color: black;}
+li:last-child {
+    border: 2px solid blue;
+  }
+
+  label,
+input[type='submit'] {
+  display: block;
+  margin-top: 1em;
+}
+
+input:checked {
+  border: none;
+  outline: 2px solid deeppink;
+}
+label {
+    display: block;
+    margin-top: 1em;
+  }
+  
+  *:disabled {
+    background-color: dimgrey;
+    color: linen;
+    opacity: 1;
+  }
+  

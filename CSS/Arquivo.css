@@ -15,9 +15,11 @@ nav.Menu ul {
     display: flex;
     gap: 20px;
     
+} 
+
+nav.Menu ul li {
+    display: inline-block;
 }
-
-
 
 nav.Menu ul li a {
     text-decoration: none;
@@ -85,4 +87,5 @@ nav.Menu ul li a {
     border-radius: 100%;
     width: 30px;
     height: 30px;
+    
 }

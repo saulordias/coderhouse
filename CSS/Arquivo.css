@@ -17,9 +17,7 @@ nav.Menu ul {
     
 }
 
-nav.Menu ul li {
-    display: inline-block;
-}
+
 
 nav.Menu ul li a {
     text-decoration: none;

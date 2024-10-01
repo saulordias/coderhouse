@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    height: 650px;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    width: auto;
+}
+
+
+.cabecalho {
+
+    background-color: rgb(5, 76, 168);
+    height: 200px;
+
+}
+
+.navegacao {
+    background-color: orangered;
+    width: 20%;
+    
+
+}
+
+.conteudo {
+
+    background-color: purple;
+    width: 60%;
+}
+
+.barralateral {
+
+    background-color: orange;
+    width: 20%;
+}
+
+.rodape {
+
+    background-color: rgb(5, 76, 168);
+    height: 90px;
+}  
+
+
+.conteudo,.navegacao,.barralateral,.cabecalho,.rodape {
+    padding: 1px;
+    margin: 1px;
+}

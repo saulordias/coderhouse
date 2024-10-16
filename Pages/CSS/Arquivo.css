@@ -1,3 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* O conteúdo principal vai crescer para ocupar o espaço disponível */
+body {
+    flex: 1;
+    
+}
+
 /* Header com logo centralizado e user à direita */
 header {
     display: flex;
@@ -8,10 +21,8 @@ header {
     margin-bottom: 10px; /* Adiciona espaço abaixo do header */
 }
 
-.nomenautica{
-
-color: #0991AF;
-    
+.nomenautica {
+    color: #0991AF;
 }
 
 .logo {
@@ -31,17 +42,12 @@ color: #0991AF;
     display: flex;
     align-items: center;
     position: relative; /* Para posicionar o submenu em relação ao usuário */
-
 }
 
 .user span {
     margin-right: 10px; /* Espaço entre o nome e a imagem */
 }
 
-
-
-
-/* Código já existente do menu */
 nav.Menu {
     background-color: #0991AF; /* Cor de fundo azul */
     padding: 10px 20px;
@@ -133,13 +139,12 @@ nav.Menu ul li a:hover {
     margin: 10px auto; /* Centraliza a linha */
 }
 
-#carouselExampleIndicators{
+#carouselExampleIndicators {
     display: flex;
     justify-content: center; /* Centraliza as imagens */
     margin: 0 auto; /* Centraliza o container */
     max-width: 3000px; /* Define uma largura máxima */
     padding: 0 450px; /* Margens laterais */
-
 }
 
 .carousel-caption {
@@ -155,5 +160,417 @@ nav.Menu ul li a:hover {
     box-sizing: border-box; /* Garante que o padding seja considerado na largura total */
 }
 
+footer {
+    background-color: #0991AF; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 20px 0; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+    margin-top: auto; /* Garante que o footer "grude" no final */
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilização das redes sociais */
+.social-media a {
+    margin: 0 10px; /* Espaçamento entre os ícones */
+}
+
+.social-media img {
+    width: 40px; /* Tamanho dos ícones de redes sociais */
+    height: auto;
+    filter: brightness(0) invert(1); /* Torna os ícones brancos */
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre os ícones */
+.social-media a:hover img {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Estilo do texto no footer */
+.footer-text p {
+    margin: 0; /* Remove a margem padrão */
+    font-size: 14px; /* Tamanho da fonte */
+    line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+/* Estilo do texto de copyright */
+.footer-text p:last-child {
+    font-size: 12px; /* Tamanho menor para o texto de copyright */
+    color: #e0e0e0; 
+}
+
+/* CSS páginas cruzeiros *//* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros *//* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros *//* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros *//* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros *//* CSS páginas cruzeiros */
+
+/* menu quando entra na paginas */
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    list-style: none;
+    background-color: #ffffff !important ; /* Cor de fundo azul com !important */
+    align-items: center;
+    width: 100%; /* Faz com que a faixa ocupe toda a largura disponível */
+    max-width: 100%; /* Assegura que não ultrapasse a largura do contêiner */
+    margin: 0; /* Remove margens para evitar desajustes */
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    padding: 0 8px;
+    color: #0991AF !important; /* Cor para o separador */
+}
+
+.breadcrumb-item a {
+    color: #0991AF; /* Cor para os links */
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: #c4bdbd !important; /* Cor Preta para o item ativo */
+}
+
+  /* Titulo texto */
+
+.titulomsc{
+
+    color:#0991AF ;
+    text-align: center
+}
+
+.paragrafomsc {
+    text-align: center;
+    margin: 0 auto; /* Centraliza o container */
+    max-width: 3000px; /* Define uma largura máxima */
+    padding-left: 50px; /* Adiciona margem interna do lado esquerdo */
+    padding-right: 50px; /* Adiciona margem interna do lado direito */
+    box-sizing: border-box; 
+}
 
 
+.Naviosmsc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.msc1, .msc2, .msc3 {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(to top, #333 0%, #fff 50%);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.msc1:hover, .msc2:hover, .msc3:hover {
+    transform: scale(1.05);
+}
+
+.msc1 img, .msc2 img, .msc3 img {
+    width: 100%; /* Aqui a largura da imagem é definida para 100% do container */
+    height: auto; /* A altura é ajustada automaticamente */
+    display: block;
+    max-width: 3000px; /* Definindo o tamanho máximo da imagem */
+    border-bottom: 2px solid #ccc;
+}
+
+.ship-name {
+    padding: 15px;
+    font-size: 18px;
+    color: #0991AF;
+    font-weight: bold;
+    background-color: #fff;
+    text-transform: uppercase;
+}
+
+.msc1 a, .msc2 a, .msc3 a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Estilizando a seção para layout flexível */
+.imagemrecursos {
+    display: flex;
+    flex-direction: row; /* Mantém imagem à esquerda e texto à direita */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Estilos para o contêiner de imagem */
+.image-container img {
+    max-width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o contêiner de texto */
+.text-container {
+    max-width: 900px;
+}
+
+.text-container h3 {
+    font-size: 1.8rem;
+    color: #0991AF;
+    margin-bottom: 10px;
+}
+
+.text-container p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* INVERTIDO */
+
+.imagemrecursos2 {
+    display: flex;
+    flex-direction: row-reverse; /* Inverte a ordem: imagem à direita, texto à esquerda */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Estilos para o contêiner de imagem */
+.image-container2 img {
+    max-width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o contêiner de texto */
+.text-container2 {
+    max-width: 900px;
+}
+
+.text-container2 h3 {
+    font-size: 1.8rem;
+    color: #0991AF;
+    margin-bottom: 10px;
+}
+
+.text-container2 p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+
+.apresentacaonavio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Largura total da página */
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+}
+
+.imagemapresentacao {
+    max-width: 1200px; /* Tamanho máximo da imagem */
+    width: 1000px; /* A imagem ocupará 100% da largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-bottom: 2px solid #ccc;
+    border-radius: 15px; /* Arredonda as bordas da imagem */
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+/* Incluindo video */ /* Incluindo video *//* Incluindo video *//* Incluindo video *//* Incluindo video */
+/* Incluindo video */
+/* Incluindo video */
+
+.video-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Fundo leve para destacar a seção */
+}
+
+.video-container {
+    flex: 1;
+    margin-right: 30px; /* Espaçamento entre o vídeo e o texto */
+}
+
+.textovideoyoutube {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Informações do navio */
+
+.numeros-section {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 50px 0;
+}
+
+.numeros-section h4 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000; /* Cor azul escuro */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.numeros-section h4::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #0991AF; /* Barra laranja embaixo do título */
+    margin: 10px auto 0;
+}
+
+.numeros-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coluna {
+    width: 45%; /* Tamanho das colunas, cada uma com 45% do espaço */
+    text-align: left;
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: 16px;
+    color: #0991AF;
+}
+
+.valor {
+    font-size: 16px;
+    color: #000000;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #0991AF; /* Linha horizontal azul escuro */
+    margin: 10px 0;
+}
+
+
+
+
+
+/* Responsividade - Para telas menores */
+@media (max-width: 768px) {
+    .video-section {
+        flex-direction: column; /* Em telas pequenas, o vídeo e o texto ficam um abaixo do outro */
+        text-align: center;
+    }
+
+    .video-container iframe {
+        width: 100%; /* O vídeo ocupa toda a largura do container em telas menores */
+    }
+}
+
+/* Estilos responsivos para dispositivos menores */
+@media (max-width: 768px) {
+    .image-text-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .text-container p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    #carouselExampleIndicators {
+        padding: 0 200px; /* Ajuste do padding para telas menores */
+    }
+}
+
+@media (max-width: 992px) {
+    .cruise-logos {
+        gap: 50px; /* Diminui o espaçamento entre as imagens em telas médias */
+    }
+
+    #carouselExampleIndicators {
+        padding: 0 100px; /* Reduz o padding do carrossel */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 70px;
+        height: auto;
+    }
+
+    #UltimasNoticias h2::after {
+        width: 100%; /* Linha de título adaptada para largura da tela */
+    }
+
+    .cruise-logos {
+        gap: 30px; /* Mais ajuste no espaçamento em telas menores */
+    }
+
+    #carouselExampleIndicators {
+        padding: 0 50px; /* Ajuste para telas menores */
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+    }
+
+    .logo {
+        position: relative;
+        left: 0;
+        transform: none;
+    }
+
+    .user {
+        margin-top: 10px;
+    }
+
+    .cruise-logos {
+        flex-direction: column; /* As imagens
+
+        

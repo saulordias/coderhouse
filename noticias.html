@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="AULA,HTML,ATIVIDADE">
+    <meta name="description"
+        content="Seu portal completo sobre cruzeiros! Aqui você encontra todas as informações sobre os principais navios das quatro maiores companhias marítimas do mundo: MSC Cruises, Costa Cruises, Norwegian Cruise Line (NCL) e Royal Caribbean">
+    <link rel="icon" href="https://github.com/saulordias/coderhouse/blob/main/Imagens/Logo.png?raw=true" type="image/x-icon">
+    <title>Náutica Premium</title>
+    <link rel="stylesheet" href="Pages/CSS/Arquivo.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- CDN do Bootstrap do CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- CDN da biblioteca do Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <!-- CDN da biblioteca do Popper  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+    <!-- CDN do Bootstrap do JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+   
+    <header>
+        <div class="logo">
+            <a href="index.html"> <!-- Adiciona um link ao redor do logo e do texto -->
+                <img src="https://github.com/saulordias/coderhouse/blob/main/Imagens/Logo.png?raw=true"
+                    alt="Logo Náutica Premium" width="50" height="50">
+            </a>
+            <h5 class="nomenautica">Náutica Premium</h5>
+        </div>
+    </header>
+
+    <nav class="Menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="noticias.html">Notícias</a></li>
+            <li><a href="sobrenos.html">Sobre nós</a></li>
+        </ul>
+        <form class="search-form" action="/buscar" method="get">
+            <input type="text" placeholder="Buscar" name="q">
+            <button type="submit">🔍</button>
+        </form>
+    </nav>
+    <br><br><br><br>
+
+    
+    <section id="pageultimas"> 
+        <h2><b>Principais notícias</b></h2><br><br>
+    
+        <div class="imagemrecursosnoticiasnew">
+            <a href="https://krooze.com.br/noticias/contagem-regressiva-estreia-explora-ii" target="_blank" class="image-containernoticiasnew">
+                <img src="https://krooze.com.br/wp-content/uploads/2022/12/EP.jpg"
+                     alt="imagem1">
+                <div class="overlayNoticiasnew">Ver mais</div>
+            </a>
+            <div class="text-containernoticiasnew">
+                <h3 class="titulomsc"><b>Contagem regressiva para a estreia do EXPLORA 2</b></h3>
+                <p class="paragrafomsc">A Explora Journeys já vive a expectativa para o lançamento do segundo navio da sua frota. O EXPLORA II parte para sua viagem inaugural em uma semana (dia 16 de setembro) – e a companhia acaba de anunciar quem será a madrinha da embarcação. Rosalba Giugni irá batizar o navio durante a cerimônia oficial de nomeação, em 15 de setembro, em Civitavecchia, na Itália.</p>
+            </div>
+        </div>
+        <br>
+        <div class="imagemrecursos2noticiasnew">
+            <a href="https://krooze.com.br/noticias/super-iate-ilma-estreia-europa" target="_blank"  class="image-containernoticias2new">
+                <img src="https://krooze.com.br/wp-content/uploads/2024/09/RYMIA-Ilma-Exterior-Marina-800x450.jpg"
+                     alt="imagem2">
+                <div class="overlayNoticiasnew">Ver mais</div>
+            </a>
+            <div class="text-containernoticias2new">
+                <h3 class="titulomsc"><b>Super iate Ilma faz sua estreia na Europa</b></h3>
+                <p class="paragrafomsc">Foi com luxo e muita exclusividade que a The Ritz-Carlton Yacht Collection começou ontem, 2 de setembro, a viagem inaugural do seu super iate Ilma. A segunda embarcação da frota iniciou uma viagem de sete noites desde Monte Carlo até Roma, na Itália. Com o lançamento, a companhia reforça sua posição na vanguarda do setor de navegação de luxo, ilustrando uma visão focada no futuro.</p>
+            </div>
+        </div>
+        <br>
+        <div class="imagemrecursosnoticiasnew">
+            <a href="https://krooze.com.br/noticias/cruzeiro-raizes-italianas-costa" target="_blank" class="image-containernoticiasnew">
+                <img src="https://krooze.com.br/wp-content/uploads/2024/09/Costa-Diadema-10-800x450.jpg"
+                     alt="imagem1">
+                <div class="overlayNoticiasnew">Ver mais</div>
+            </a>
+            <div class="text-containernoticiasnew">
+                <h3 class="titulomsc"><b>Tutti Italiani: cruzeiro celebra imigração italiana no Brasil</b></h3>
+                <p class="paragrafomsc">A Costa Cruzeiros preparou um roteiro muito especial para celebrar os 150 anos da imigração italiana no Brasil. O Cruzeiro das Raízes Italianas sairá da Itália em direção ao Brasil para relembrar a travessia realizada por milhares de imigrantes que atravessaram o oceano em busca de uma nova oportunidade de vida. O cruzeiro também marca a comemoração dos 76 anos da companhia no país.</p>
+            </div>
+        </div>
+        <br>
+        <div class="imagemrecursos2noticiasnew">
+            <a href="https://krooze.com.br/noticias/crystal-lanca-promocao-imperdivel-tres-suites-ganha-uma" target="_blank"  class="image-containernoticias2new">
+                <img src="https://krooze.com.br/wp-content/uploads/2024/10/crystal-2-800x450.jpg"
+                     alt="imagem2">
+                <div class="overlayNoticiasnew">Ver mais</div>
+            </a>
+            <div class="text-containernoticias2new">
+                <h3 class="titulomsc"><b>Crystal lança promoção imperdível: reserve três suítes e ganhe uma de cortesia</b></h3>
+                <p class="paragrafomsc">A Crystal Cruises, companhia de cruzeiro de luxo, anunciou uma nova campanha imperdível onde oferece uma oportunidade exclusiva de tornar real a experiência de quem nunca viajou em um cruzeiro de luxo. A promoção “Compre três, navegue de cortesia” oferece uma suíte adicional gratuita ao hóspede que reservar três suítes Aquamarine ou superiores em partidas qualificadas.</p>
+            </div>
+        </div>
+        <br>
+        <div class="imagemrecursosnoticiasnew">
+            <a href="https://krooze.com.br/noticias/cruzeiros-tematicos-perto-da-lotacao" target="_blank" class="image-containernoticiasnew">
+                <img src="https://krooze.com.br/wp-content/uploads/2024/10/Carabe-800x450.jpg"
+                     alt="imagem1">
+                <div class="overlayNoticiasnew">Ver mais</div>
+            </a>
+            <div class="text-containernoticiasnew">
+                <h3 class="titulomsc"><b>Cruzeiros temáticos se aproximam da lotação máxima com alta demanda</b></h3>
+                <p class="paragrafomsc">Está quase esgotado, e você não pode ficar de fora! A PromoAção anunciou que sete cruzeiros temáticos estão com poucas cabines disponíveis. A busca por experiências personalizadas, como shows e festas exclusivas, tem movimentado o setor, atraindo cruzeiristas em massa. Com a contagem regressiva já iniciada para alguns desses eventos, é melhor garantir sua cabine agora, antes que todas se esgotem.</p>
+            </div>
+        </div>
+        <br>
+        <div class="imagemrecursos2noticiasnew">
+            <a href="https://krooze.com.br/noticias/norwegian-cruise-line-lidera-mercado-de-cruzeiros-solo/" target="_blank"  class="image-containernoticias2new">
+                <img src="https://krooze.com.br/wp-content/uploads/2024/10/Norwegian-Spirit-Singapura-Divulgacao_cortada-800x450.jpeg"
+                     alt="imagem2">
+                <div class="overlayNoticiasnew">Ver mais</div>
+            </a>
+            <div class="text-containernoticias2new">
+                <h3 class="titulomsc"><b>Norwegian Cruise Line lidera mercado de cruzeiros solo</b></h3>
+                <p class="paragrafomsc">A Norwegian Cruise Line (NCL) continua ganhando força com o mercado de cruzeiros solo. A companhia tem se destacado ao oferecer soluções inovadoras para pessoas que viajam sozinhas. Desde 2010, a NCL tem se concentrado em desenvolver opções exclusivas para esse público, começando com o lançamento das cabines Studio a bordo do Norwegian Epic. As cabines Studio são especialmente projetadas para quem viaja sozinho e incluem comodidades exclusivas, como o Studio Lounge, um espaço privado onde os hóspedes podem socializar e relaxar. Essa iniciativa pioneira foi expandida para outros navios da frota, tornando a Norwegian líder no mercado de cruzeiros solo.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <br><br><br>
+    
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="https://img.icons8.com/ios11/512/facebook-new.png" alt="Facebook">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="https://www.iconarchive.com/download/i111410/fa-team/fontawesome-brands/FontAwesome-Brands-Instagram.1024.png"
+                        alt="Instagram">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/X_icon.svg/2048px-X_icon.svg.png"
+                        alt="Twitter">
+                </a>
+            </div>
+            <div class="footer-text">
+                <p>Conecte-se conosco nas redes sociais</p>
+                <p>&copy; 2024 Náutica Premium. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

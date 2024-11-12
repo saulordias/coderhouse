@@ -1167,18 +1167,19 @@ hr {
 }
 @media (max-width: 768px) {
     .carousel-caption {
-        position: relative; /* Posicionamento relativo para que o texto seja exibido abaixo */
-        background: rgba(0, 0, 0, 0.6); /* Fundo semitransparente para melhor legibilidade */
-        color: white; /* Cor do texto */
+        position: relative;
+        background: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+        color: white;
         padding: 10px;
         text-align: center;
-        width: 100%; /* Garante que o texto ocupe toda a largura abaixo da imagem */
+        width: 70%; /* Ajuste a largura para ficar dentro da imagem */
+        max-width: 100%; /* Garante que o texto não ultrapasse a largura da imagem */
+        margin: 0 auto; /* Centraliza o texto horizontalmente */
         box-sizing: border-box;
-        margin-top: 10px;
     }
 
     .carousel-item img {
-        margin-bottom: 0; /* Remove qualquer margem adicional */
+        margin-bottom: 0;
     }
 
     /* Remove as classes de ocultação em dispositivos móveis */

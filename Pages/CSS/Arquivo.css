@@ -1187,3 +1187,60 @@ hr {
         display: block !important;
     }
 }
+@media (max-width: 768px) {
+    .paragrafomsc {
+        text-align: justify;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+/* Layout para telas grandes */
+.imagemrecursos, .imagemrecursos2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Layout vertical em telas pequenas */
+@media (max-width: 768px) {
+    .imagemrecursos, .imagemrecursos2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-container img, .image-container2 img {
+        width: 100%; /* Imagem ocupa a largura total do contêiner */
+        height: auto; /* Ajusta altura automaticamente */
+        min-width: unset; /* Remove limite mínimo para telas pequenas */
+    }
+
+    .text-container, .text-container2 {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Layout ajustado para telas de notebook */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .image-container img, .image-container2 img {
+        width: 90%; /* Reduz a largura da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+        max-height: 500px; /* Limita a altura para evitar distorção */
+    }
+
+    .text-container, .text-container2 {
+        max-width: 80%; /* Ajusta a largura do contêiner de texto */
+        padding: 10px;
+    }
+
+    .text-container h3, .text-container2 h3 {
+        font-size: 1.5rem; /* Diminui o tamanho da fonte do título */
+    }
+
+    .text-container p, .text-container2 p {
+        font-size: 0.9rem; /* Diminui o tamanho da fonte do parágrafo */
+    }
+}

@@ -696,15 +696,24 @@ hr {
 
 #pageultimas h2 {
     text-align: center;
-    /* Centraliza o título */
-    font-size: 2rem;
-    /* Tamanho do texto */
+    font-size: 27px;
     margin-bottom: 20px;
-    /* Espaçamento abaixo do título */
-    color: #0991AF;
-    /* Cor do texto (ajuste conforme necessário) */
-    font-weight: bold;
-    /* Deixe o título em negrito */
+    position: relative;
+    color: #000000;
+}
+
+#pageultimas h2::after {
+    content: '';
+    display: block;
+    width: 1500px;
+    /* Largura da linha */
+    height: 2px;
+    /* Altura da linha */
+    background-color: #0991AF;
+    /* Cor da linha (mesma cor do menu) */
+    margin: 10px auto;
+    /* Centraliza a linha */
+
 }
 
 .imagemrecursosnoticiasnew {
@@ -1036,5 +1045,97 @@ hr {
     .text-container, .text-container2 {
         max-width: 100%;
         padding: 10px;
+    }
+}
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    #carouselExampleIndicators {
+        padding: 0; /* Remove o padding para que o carrossel ocupe toda a largura */
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    .carousel-inner img {
+        width: 100%; /* Garante que as imagens ocupem toda a largura */
+        height: auto; /* Mantém a proporção original das imagens */
+    }
+    
+    .carousel-caption h6 {
+        font-size: 1rem; /* Ajusta o tamanho da fonte para dispositivos móveis */
+    }
+}
+/* Responsividade para dispositivos móveis */
+/* Responsividade para dispositivos móveis */
+/* Responsividade para dispositivos móveis */
+/* Responsividade para dispositivos móveis */
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Configuração responsiva para o contêiner da primeira notícia */
+    .imagemrecursosnoticiasnew {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .text-containernoticiasnew {
+        max-width: 100%;
+        text-align: center;
+        order: -1; /* Garante que o texto fique acima da imagem */
+    }
+
+    .image-containernoticiasnew {
+        order: 1; /* Garante que a imagem fique abaixo do texto */
+    }
+
+    .image-containernoticiasnew img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+    }
+
+    /* Configuração responsiva para o contêiner da segunda notícia */
+    .imagemrecursos2noticiasnew {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .text-containernoticias2new {
+        max-width: 100%;
+        text-align: center;
+        order: -1; /* Garante que o texto fique acima da imagem */
+    }
+
+    .image-containernoticias2new {
+        order: 1; /* Garante que a imagem fique abaixo do texto */
+    }
+
+    .image-containernoticias2new img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+    }
+
+    /* Ajustes para o overlay "Ver mais" */
+    .overlayNoticiasnew {
+        position: static;
+        width: auto;
+        height: auto;
+        margin-top: 10px;
+        background-color: transparent;
+        color: #0991AF;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        opacity: 1;
+    }
+
+    /* Ajustes de tamanho de fonte para o título e o parágrafo */
+    .text-containernoticiasnew h3, .text-containernoticias2new h3 {
+        font-size: 1.5rem;
+    }
+
+    .text-containernoticiasnew p, .text-containernoticias2new p {
+        font-size: 0.9rem;
     }
 }

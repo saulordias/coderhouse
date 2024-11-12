@@ -159,8 +159,8 @@ nav.Menu ul li a:hover {
         flex-direction: column; /* Coloca as imagens em coluna */
         gap: 20px; /* Reduz o espaço entre as imagens */
         align-items: center; /* Garante que as imagens fiquem centralizadas */
-        padding-left: 0px; /* Adiciona leve preenchimento à esquerda para evitar corte */
-        padding-right: 500px; /* Adiciona leve preenchimento à direita para evitar corte */
+        padding-left: 10px; /* Adiciona leve preenchimento à esquerda para evitar corte */
+        padding-right: 10px; /* Adiciona leve preenchimento à direita para evitar corte */
     }
 }
 
@@ -582,7 +582,7 @@ footer {
 }
 
 /* Responsividade - Para telas menores */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .video-section {
         flex-direction: column;
         text-align: center;

@@ -1,65 +1,84 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    /* Evita rolagem horizontal */
+
 }
 
 body {
     flex: 1;
+    width: 100%;
 }
 
 /* Estilos para o header com logo centralizado */
 header {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Mantém o logo à esquerda */
+    justify-content: space-between;
+    /* Alinha o logo à esquerda e a busca à direita */
     padding: 0px 0px;
-    margin: 0; /* Remove a margem para reduzir o espaço */
+    margin: 0;
+    /* Remove a margem para reduzir o espaço */
+
 }
 
 .nomenautica {
     color: #0991AF;
-    margin-left: 10px; /* Espaço entre o logo e o texto */
+    margin-left: 0px;
+    /* Espaço entre o logo e o texto */
+    padding: 0px 0px;
 }
 
 .logo {
     display: flex;
     align-items: center;
     text-align: center;
+
 }
 
 .logo img {
     margin-right: 10px;
 }
+
 .logosobrenos {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Define a altura da div para ocupar a altura total da tela */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    height: 100vh;
+    /* Define a altura da div para ocupar a altura total da tela */
 }
 
 .logosobrenos img {
-    max-width: 100%; /* Garante que a imagem não exceda o tamanho do container */
-    max-height: 100%; /* Garante que a imagem se ajuste verticalmente se necessário */
+    max-width: 100%;
+    /* Garante que a imagem não exceda o tamanho do container */
+    max-height: 100%;
+    /* Garante que a imagem se ajuste verticalmente se necessário */
 }
 
 /* Menu de navegação */
 nav.Menu {
-    background-color: #0991AF; /* Cor de fundo azul */
+    background-color: #0991AF;
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza o menu */
+    justify-content: center;
     position: relative;
 }
 
 nav.Menu ul {
     list-style-type: none;
-    margin: 0 auto; /* Centraliza horizontalmente os itens do menu */
+    margin: 0;
     padding: 0;
     display: flex;
     gap: 20px;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 nav.Menu ul li {
@@ -69,25 +88,24 @@ nav.Menu ul li {
 nav.Menu ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     padding: 10px 15px;
-    transition: background-color 0.3s ease; /* Suaviza a transição */
+    transition: background-color 0.3s ease;
 }
 
-/* Efeito hover para escurecer as opções do menu */
 nav.Menu ul li a:hover {
-    background-color: #066d84; /* Cor mais escura no hover */
-    border-radius: 5px; /* Bordas arredondadas (opcional) */
+    background-color: #066d84;
+    border-radius: 5px;
 }
 
 /* Campo de busca */
 .search-form {
-    position: absolute;
-    right: 20px; /* Posiciona o campo de busca no canto direito */
     display: flex;
     align-items: center;
     gap: 10px;
+    position: absolute;
+    right: 20px;
 }
 
 .search-form input[type="text"] {
@@ -114,25 +132,36 @@ nav.Menu ul li a:hover {
 /* Centraliza as imagens das companhias marítimas */
 .cruise-logos {
     display: flex;
-    justify-content: center; /* Centraliza as imagens */
-    flex-wrap: wrap; /* Permite quebra de linha caso necessário */
-    gap: 300px; /* Espaçamento entre as imagens */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que as imagens quebrem a linha */
+    gap: 300px; /* Ajusta o espaçamento entre as imagens */
     margin: 0 auto; /* Centraliza o container */
-    max-width: 3000px; /* Define uma largura máxima */
-    padding: 0 20px; /* Margens laterais */
-    
-
+    max-width: 100%; /* Ocupa toda a largura da tela */
+    padding: 0 20px;
 }
 
+/* Estilos para as imagens */
 .cruise-logos a img {
-    border: 2px solid #ffffff; /* Borda fina em volta das imagens */
+    border: 0px solid #0991AF; /* Borda fina em volta das imagens */
     border-radius: 500px; /* Suaviza os cantos da borda */
     transition: transform 0.3s, box-shadow 0.3s; /* Transição suave para o efeito de hover */
 }
 
+/* Efeito de hover */
 .cruise-logos a img:hover {
     transform: scale(1.1); /* Leve aumento no tamanho da imagem ao passar o mouse */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+    .cruise-logos {
+        flex-direction: column; /* Coloca as imagens em coluna */
+        gap: 20px; /* Reduz o espaço entre as imagens */
+        align-items: center; /* Garante que as imagens fiquem centralizadas */
+        padding-left: 0px; /* Adiciona leve preenchimento à esquerda para evitar corte */
+        padding-right: 500px; /* Adiciona leve preenchimento à direita para evitar corte */
+    }
 }
 
 /* Centraliza o título "Últimas notícias" com linha decorativa */
@@ -146,18 +175,26 @@ nav.Menu ul li a:hover {
 #UltimasNoticias h2::after {
     content: '';
     display: block;
-    width: 1500px; /* Largura da linha */
-    height: 2px; /* Altura da linha */
-    background-color: #0991AF; /* Cor da linha (mesma cor do menu) */
-    margin: 10px auto; /* Centraliza a linha */
+    width: 1500px;
+    /* Largura da linha */
+    height: 2px;
+    /* Altura da linha */
+    background-color: #0991AF;
+    /* Cor da linha (mesma cor do menu) */
+    margin: 10px auto;
+    /* Centraliza a linha */
 }
 
 #carouselExampleIndicators {
     display: flex;
-    justify-content: center; /* Centraliza as imagens */
-    margin: 0 auto; /* Centraliza o container */
-    max-width: 3000px; /* Define uma largura máxima */
-    padding: 0 450px; /* Margens laterais */
+    justify-content: center;
+    /* Centraliza as imagens */
+    margin: 0 auto;
+    /* Centraliza o container */
+    max-width: 3000px;
+    /* Define uma largura máxima */
+    padding: 0 450px;
+    /* Margens laterais */
 }
 
 .carousel-caption {
@@ -165,20 +202,29 @@ nav.Menu ul li a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 70%; /* O fundo ocupa toda a largura da imagem */
-    height: 100px; /* Altura maior para o fundo */
+    width: 70%;
+    /* O fundo ocupa toda a largura da imagem */
+    height: 100px;
+    /* Altura maior para o fundo */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
     padding: 5px;
-    border-radius: 20px; /* Bordas arredondadas */
-    box-sizing: border-box; /* Garante que o padding seja considerado na largura total */
+    border-radius: 20px;
+    /* Bordas arredondadas */
+    box-sizing: border-box;
+    /* Garante que o padding seja considerado na largura total */
 }
 
 footer {
-    background-color: #0991AF; /* Cor de fundo */
-    color: #fff; /* Cor do texto */
-    padding: 20px 0; /* Espaçamento interno */
-    text-align: center; /* Centraliza o conteúdo */
-    margin-top: auto; /* Garante que o footer "grude" no final */
+    background-color: #0991AF;
+    /* Cor de fundo */
+    color: #fff;
+    /* Cor do texto */
+    padding: 20px 0;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o conteúdo */
+    margin-top: auto;
+    /* Garante que o footer "grude" no final */
 }
 
 .footer-container {
@@ -191,39 +237,52 @@ footer {
 
 /* Estilização das redes sociais */
 .social-media a {
-    margin: 0 10px; /* Espaçamento entre os ícones */
+    margin: 0 10px;
+    /* Espaçamento entre os ícones */
 }
 
 .social-media img {
-    width: 40px; /* Tamanho dos ícones de redes sociais */
+    width: 40px;
+    /* Tamanho dos ícones de redes sociais */
     height: auto;
-    filter: brightness(0) invert(1); /* Torna os ícones brancos */
+    filter: brightness(0) invert(1);
+    /* Torna os ícones brancos */
     transition: transform 0.3s ease;
 }
 
 /* Efeito ao passar o mouse sobre os ícones */
 .social-media a:hover img {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.1);
+    /* Efeito de zoom ao passar o mouse */
 }
 
 /* Estilo do texto no footer */
 .footer-text p {
-    margin: 0; /* Remove a margem padrão */
-    font-size: 14px; /* Tamanho da fonte */
-    line-height: 1.5; /* Espaçamento entre linhas */
+    margin: 0;
+    /* Remove a margem padrão */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    line-height: 1.5;
+    /* Espaçamento entre linhas */
 }
 
 /* Estilo do texto de copyright */
 .footer-text p:last-child {
-    font-size: 12px; /* Tamanho menor para o texto de copyright */
-    color: #e0e0e0; 
+    font-size: 12px;
+    /* Tamanho menor para o texto de copyright */
+    color: #e0e0e0;
 }
 
-/* CSS páginas cruzeiros *//* CSS páginas cruzeiros */
-/* CSS páginas cruzeiros *//* CSS páginas cruzeiros */
-/* CSS páginas cruzeiros *//* CSS páginas cruzeiros */
-/* CSS páginas cruzeiros *//* CSS páginas cruzeiros */
-/* CSS páginas cruzeiros *//* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros */
+/* CSS páginas cruzeiros */
 
 /* menu quando entra na paginas */
 
@@ -232,21 +291,27 @@ footer {
     flex-wrap: wrap;
     padding: 10px 20px;
     list-style: none;
-    background-color: #ffffff !important ; /* Cor de fundo azul com !important */
+    background-color: #ffffff !important;
+    /* Cor de fundo azul com !important */
     align-items: center;
-    width: 100%; /* Faz com que a faixa ocupe toda a largura disponível */
-    max-width: 100%; /* Assegura que não ultrapasse a largura do contêiner */
-    margin: 0; /* Remove margens para evitar desajustes */
+    width: 100%;
+    /* Faz com que a faixa ocupe toda a largura disponível */
+    max-width: 100%;
+    /* Assegura que não ultrapasse a largura do contêiner */
+    margin: 0;
+    /* Remove margens para evitar desajustes */
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     content: ">";
     padding: 0 8px;
-    color: #0991AF !important; /* Cor para o separador */
+    color: #0991AF !important;
+    /* Cor para o separador */
 }
 
 .breadcrumb-item a {
-    color: #0991AF; /* Cor para os links */
+    color: #0991AF;
+    /* Cor para os links */
     text-decoration: none;
 }
 
@@ -255,55 +320,80 @@ footer {
 }
 
 .breadcrumb-item.active {
-    color: #c4bdbd !important; /* Cor Preta para o item ativo */
+    color: #c4bdbd !important;
+    /* Cor Preta para o item ativo */
 }
 
-  /* Titulo texto */
+/* Titulo texto */
 
-.titulomsc{
-
-    color:#0991AF ;
-    text-align: center
+.titulomsc {
+    color: #0991AF;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    /* Espaçamento superior para o título */
 }
 
 .paragrafomsc {
     text-align: center;
-    margin: 0 auto; /* Centraliza o container */
-    max-width: 3000px; /* Define uma largura máxima */
-    padding-left: 50px; /* Adiciona margem interna do lado esquerdo */
-    padding-right: 50px; /* Adiciona margem interna do lado direito */
-    box-sizing: border-box; 
+    margin: 0 auto;
+    max-width: 2000px;
+    /* Limita a largura máxima para melhor legibilidade */
+    padding: 0 20px;
+    /* Margem interna nas laterais */
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 
+/* Seção Navios */
 .Naviosmsc {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     padding: 20px;
+    flex-wrap: wrap;
+    /* Permite que os elementos quebrem linha em telas menores */
 }
 
-.msc1, .msc2, .msc3 {
+.msc1,
+.msc2,
+.msc3 {
     position: relative;
     text-align: center;
     background: linear-gradient(to top, #333 0%, #fff 50%);
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease;
+    width: 600px;
+    /* Largura padrão para telas grandes */
+    max-width: 100%;
+    /* Limita a largura para o container */
 }
 
-.msc1:hover, .msc2:hover, .msc3:hover {
+.msc1:hover,
+.msc2:hover,
+.msc3:hover {
     transform: scale(1.05);
 }
 
-.msc1 img, .msc2 img, .msc3 img {
-    width: 600px; /* Define uma largura fixa */
-    height: 400px; /* Define uma altura fixa */
-    object-fit: auto; /* Ajusta a imagem para cobrir o container sem distorção */
+.msc1 img,
+.msc2 img,
+.msc3 img {
+    width: 100%;
+    /* Imagens responsivas */
+    max-width: 600px;
+    /* Limita a largura máxima para manter o layout */
+    height: 400px;
+    /* Altura fixa para manter proporção */
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir o container sem distorção */
     display: block;
     border-bottom: 2px solid #ccc;
 }
+
 .ship-name {
     padding: 15px;
     font-size: 18px;
@@ -313,16 +403,20 @@ footer {
     text-transform: uppercase;
 }
 
-.msc1 a, .msc2 a, .msc3 a {
+.msc1 a,
+.msc2 a,
+.msc3 a {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
+
 /* Estilizando a seção para layout flexível */
 .imagemrecursos {
     display: flex;
-    flex-direction: row; /* Mantém imagem à esquerda e texto à direita */
+    flex-direction: row;
+    /* Mantém imagem à esquerda e texto à direita */
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -360,7 +454,8 @@ footer {
 
 .imagemrecursos2 {
     display: flex;
-    flex-direction: row-reverse; /* Inverte a ordem: imagem à direita, texto à esquerda */
+    flex-direction: row-reverse;
+    /* Inverte a ordem: imagem à direita, texto à esquerda */
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -394,6 +489,25 @@ footer {
     text-align: justify;
 }
 
+/* Configuração padrão para telas grandes */
+.image-container img, .image-container2 img {
+    width: 1000px; /* Largura padrão para as imagens */
+    height: 700px; /* Altura padrão para as imagens */
+    max-width: 100%; /* Permite a imagem ajustar-se para telas menores */
+    min-width: 400px; /* Limite mínimo para evitar compressão excessiva */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout padrão com imagem e texto lado a lado */
+.imagemrecursos, .imagemrecursos2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
 
 
 .apresentacaonavio {
@@ -401,21 +515,42 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Largura total da página */
+    width: 100%;
     padding: 20px;
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
 }
 
 .imagemapresentacao {
-    max-width: 1200px; /* Tamanho máximo da imagem */
-    width: 1000px; /* A imagem ocupará 100% da largura do container */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 1000px; /* Largura padrão para telas maiores */
+    height: 700px; /* Altura padrão para manter proporção */
+    max-width: 100%; /* Ajusta para largura máxima do contêiner */
     border-bottom: 2px solid #ccc;
-    border-radius: 15px; /* Arredonda as bordas da imagem */
-    margin: 0 auto; /* Centraliza a imagem */
+    border-radius: 15px;
+    margin: 0 auto;
+    object-fit: cover; /* Ajusta o conteúdo sem distorcer */
 }
 
-/* Incluindo video */ /* Incluindo video *//* Incluindo video *//* Incluindo video *//* Incluindo video */
+/* Responsividade para telas médias */
+@media (max-width: 992px) {
+    .imagemapresentacao {
+        width: 600px; /* Ajusta a largura em telas médias */
+        height: 375px; /* Mantém proporção */
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .imagemapresentacao {
+        width: 100%; /* Imagem ocupa 100% do contêiner */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+}
+
+/* Incluindo video */
+/* Incluindo video */
+/* Incluindo video */
+/* Incluindo video */
+/* Incluindo video */
 /* Incluindo video */
 /* Incluindo video */
 
@@ -424,12 +559,19 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f1f1f1; /* Fundo leve para destacar a seção */
+    background-color: #f1f1f1;
+    gap: 20px; /* Espaço entre o vídeo e o texto */
 }
 
 .video-container {
     flex: 1;
-    margin-right: 30px; /* Espaçamento entre o vídeo e o texto */
+    max-width: 1000px; /* Tamanho máximo do vídeo */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: auto; /* Mantém a proporção do vídeo */
+    aspect-ratio: 16/9; /* Define a proporção 16:9 para o vídeo */
 }
 
 .textovideoyoutube {
@@ -438,6 +580,22 @@ footer {
     flex-direction: column;
     justify-content: center;
 }
+
+/* Responsividade - Para telas menores */
+@media (max-width: 768px) {
+    .video-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .video-container {
+        max-width: 100%; /* O vídeo ocupa toda a largura disponível */
+    }
+}
+
+
+
+
 
 /* Informações do navio */
 
@@ -450,7 +608,8 @@ footer {
 .numeros-section h4 {
     font-size: 32px;
     font-weight: bold;
-    color: #000000; /* Cor azul escuro */
+    color: #000000;
+    /* Cor azul escuro */
     margin-bottom: 20px;
     position: relative;
 }
@@ -460,7 +619,8 @@ footer {
     display: block;
     width: 40px;
     height: 4px;
-    background-color: #0991AF; /* Barra laranja embaixo do título */
+    background-color: #0991AF;
+    /* Barra laranja embaixo do título */
     margin: 10px auto 0;
 }
 
@@ -478,7 +638,8 @@ footer {
 }
 
 .coluna {
-    width: 45%; /* Tamanho das colunas, cada uma com 45% do espaço */
+    width: 45%;
+    /* Tamanho das colunas, cada uma com 45% do espaço */
     text-align: left;
 }
 
@@ -495,7 +656,8 @@ footer {
 
 hr {
     border: none;
-    border-top: 1px solid #0991AF; /* Linha horizontal azul escuro */
+    border-top: 1px solid #0991AF;
+    /* Linha horizontal azul escuro */
     margin: 10px 0;
 }
 
@@ -503,9 +665,12 @@ hr {
 
 
 .informacoessobrenos {
-    max-width: 1050px; /* Define uma largura máxima para o conteúdo */
-    margin: 0 auto; /* Centraliza o bloco de conteúdo horizontalmente */
-    text-align: center; /* Centraliza o texto dentro do bloco */
+    max-width: 1050px;
+    /* Define uma largura máxima para o conteúdo */
+    margin: 0 auto;
+    /* Centraliza o bloco de conteúdo horizontalmente */
+    text-align: center;
+    /* Centraliza o texto dentro do bloco */
 }
 
 .titulosobrenos {
@@ -525,16 +690,22 @@ hr {
 /* NOTICIAS*/
 
 #pageultimas h2 {
-    text-align: center; /* Centraliza o título */
-    font-size: 2rem; /* Tamanho do texto */
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
-    color: #0991AF; /* Cor do texto (ajuste conforme necessário) */
-    font-weight: bold; /* Deixe o título em negrito */
+    text-align: center;
+    /* Centraliza o título */
+    font-size: 2rem;
+    /* Tamanho do texto */
+    margin-bottom: 20px;
+    /* Espaçamento abaixo do título */
+    color: #0991AF;
+    /* Cor do texto (ajuste conforme necessário) */
+    font-weight: bold;
+    /* Deixe o título em negrito */
 }
 
 .imagemrecursosnoticiasnew {
     display: flex;
-    flex-direction: row; /* Mantém imagem à esquerda e texto à direita */
+    flex-direction: row;
+    /* Mantém imagem à esquerda e texto à direita */
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -600,7 +771,8 @@ hr {
 
 .imagemrecursos2noticiasnew {
     display: flex;
-    flex-direction: row-reverse; /* Inverte a ordem: imagem à direita, texto à esquerda */
+    flex-direction: row-reverse;
+    /* Inverte a ordem: imagem à direita, texto à esquerda */
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -663,18 +835,56 @@ hr {
     text-align: justify;
 }
 
-
-/* Responsividade - Para telas menores */
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
-    .video-section {
-        flex-direction: column; /* Em telas pequenas, o vídeo e o texto ficam um abaixo do outro */
-        text-align: center;
+    nav.Menu {
+        flex-direction: column;
     }
 
-    .video-container iframe {
-        width: 100%; /* O vídeo ocupa toda a largura do container em telas menores */
+    nav.Menu ul {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .search-form {
+        position: static;
+        /* Remove o posicionamento absoluto */
+        justify-content: center;
+        /* Centraliza o campo de busca abaixo do menu */
+        width: 100%;
+        /* Garante que o campo de busca ocupe toda a largura */
+    }
+
+    .search-form input[type="text"] {
+        width: 80%;
+        /* Ajusta a largura do campo de busca para telas menores */
     }
 }
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .Naviosmsc {
+        flex-direction: column;
+        /* Coloca as imagens uma abaixo da outra */
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .msc1,
+    .msc2,
+    .msc3 {
+        width: 100%;
+        /* Ajusta a largura das imagens para o container em telas menores */
+    }
+
+    .msc1 img,
+    .msc2 img,
+    .msc3 img {
+        height: auto;
+        /* Ajusta a altura para manter a proporção em telas menores */
+    }
+}
+
 
 /* Estilos responsivos para dispositivos menores */
 @media (max-width: 768px) {
@@ -697,17 +907,20 @@ hr {
 /* Responsividade */
 @media (max-width: 1200px) {
     #carouselExampleIndicators {
-        padding: 0 200px; /* Ajuste do padding para telas menores */
+        padding: 0 200px;
+        /* Ajuste do padding para telas menores */
     }
 }
 
 @media (max-width: 992px) {
     .cruise-logos {
-        gap: 50px; /* Diminui o espaçamento entre as imagens em telas médias */
+        gap: 50px;
+        /* Diminui o espaçamento entre as imagens em telas médias */
     }
 
     #carouselExampleIndicators {
-        padding: 0 100px; /* Reduz o padding do carrossel */
+        padding: 0 100px;
+        /* Reduz o padding do carrossel */
     }
 }
 
@@ -718,15 +931,18 @@ hr {
     }
 
     #UltimasNoticias h2::after {
-        width: 100%; /* Linha de título adaptada para largura da tela */
+        width: 100%;
+        /* Linha de título adaptada para largura da tela */
     }
 
     .cruise-logos {
-        gap: 30px; /* Mais ajuste no espaçamento em telas menores */
+        gap: 30px;
+        /* Mais ajuste no espaçamento em telas menores */
     }
 
     #carouselExampleIndicators {
-        padding: 0 50px; /* Ajuste para telas menores */
+        padding: 0 50px;
+        /* Ajuste para telas menores */
     }
 }
 
@@ -746,6 +962,74 @@ hr {
     }
 
     .cruise-logos {
-        flex-direction: column; /* As imagens
+        flex-direction: column;
+        /* As imagens */
+    }
+}
 
-        
+/* Ajustes para telas muito grandes */
+@media (min-width: 1200px) {
+    .paragrafomsc {
+        max-width: 1800px;
+        /* Aumenta um pouco a largura máxima em telas grandes */
+        font-size: 1.1rem;
+        /* Aumenta o tamanho da fonte para melhor leitura */
+    }
+}
+
+/* Ajustes para telas médias */
+@media (max-width: 768px) {
+    .titulomsc {
+        font-size: 1.5rem;
+    }
+
+    .paragrafomsc {
+        font-size: 1rem;
+        line-height: 1.4;
+        padding: 0 15px;
+        /* Reduz a margem interna nas laterais */
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .titulomsc {
+        font-size: 1.2rem;
+    }
+
+    .paragrafomsc {
+        font-size: 0.9rem;
+        line-height: 1.3;
+        padding: 0 10px;
+        /* Margem interna ainda menor para telas pequenas */
+    }
+}
+
+/* Responsividade para telas médias */
+@media (max-width: 992px) {
+    .image-container img, .image-container2 img {
+        width: 80%; /* Reduz o tamanho da imagem em telas médias */
+        height: auto; /* Mantém a proporção da imagem */
+        min-width: 400px; /* Mantém um tamanho mínimo razoável */
+    }
+}
+
+/* Layout vertical em telas pequenas */
+@media (max-width: 768px) {
+    .imagemrecursos, .imagemrecursos2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-container img, .image-container2 img {
+        width: 100%; /* Imagem ocupa a largura total do contêiner */
+        height: auto; /* Ajusta altura automaticamente */
+        min-width: unset; /* Remove limite mínimo para telas pequenas */
+    }
+
+    .text-container, .text-container2 {
+        max-width: 100%;
+        padding: 10px;
+    }
+}

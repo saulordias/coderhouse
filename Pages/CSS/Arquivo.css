@@ -214,6 +214,17 @@ nav.Menu ul li a:hover {
     /* Garante que o padding seja considerado na largura total */
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black !important;
+    background-image: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
 footer {
     background-color: #0991AF;
     /* Cor de fundo */
@@ -1137,5 +1148,41 @@ hr {
 
     .text-containernoticiasnew p, .text-containernoticias2new p {
         font-size: 0.9rem;
+    }
+}
+/* Ajustes para o texto do carrossel em dispositivos móveis */
+@media (max-width: 768px) {
+    .carousel-caption {
+        position: static; /* Remove o posicionamento absoluto */
+        background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+        color: white; /* Cor do texto */
+        padding: 10px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .carousel-item img {
+        margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+    }
+}
+@media (max-width: 768px) {
+    .carousel-caption {
+        position: relative; /* Posicionamento relativo para que o texto seja exibido abaixo */
+        background: rgba(0, 0, 0, 0.6); /* Fundo semitransparente para melhor legibilidade */
+        color: white; /* Cor do texto */
+        padding: 10px;
+        text-align: center;
+        width: 100%; /* Garante que o texto ocupe toda a largura abaixo da imagem */
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+
+    .carousel-item img {
+        margin-bottom: 0; /* Remove qualquer margem adicional */
+    }
+
+    /* Remove as classes de ocultação em dispositivos móveis */
+    .carousel-caption.d-none.d-md-block {
+        display: block !important;
     }
 }
